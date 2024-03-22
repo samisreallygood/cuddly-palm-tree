@@ -24,9 +24,27 @@
       <p>If you have any questions or have a reccommendation for a better modpack feel free to contact me using my school email.</p>
       <p>Please also email me if you do want to take part in the server or if there is a launch date that would not work for you
     </section>
+    <section>
+      <form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+    <button type="submit" id="sendMessage">Send</button>
+  </form>
+    </section>
   </main>
   <footer>
     <p>&copy; 2024 Your Minecraft Server</p>
   </footer>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      alert('You have been rickrolled!'); // Display alert message
+      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Redirect to Rickroll
+    });
+  </script>
 </body>
 </html>
