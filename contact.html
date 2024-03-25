@@ -38,18 +38,21 @@
     <p>&copy; 2024 Your Minecraft Server</p>
   </footer>
 
-<audio id="rickrollAudio" src="rickroll-music.MP3" style="display:none;"></audio>
-  
-    <script>
-   document.getElementById('sendMessage').addEventListener('click', function() {
-      // Play the Rickroll music
-      document.getElementById('rickrollAudio').play();
-      // Display alert message after 5 seconds
-      setTimeout(function() {
-        alert('You have been rickrolled!');
-        // Redirect after clicking OK on the alert
-        window.location.href = 'https://contact-instructions';
-      }, 5000); // 5000 milliseconds = 5 seconds
+<audio id="rickrollAudio" src="rickroll-music.MP3"></audio>
+
+  <script>
+    const sendButton = document.getElementById('sendButton');
+    const message = document.getElementById('message');
+    const okButton = document.getElementById('okButton');
+    const rickrollAudio = document.getElementById('rickrollAudio');
+
+    sendButton.addEventListener('click', function() {
+      rickrollAudio.play();
+      message.style.display = 'block';
+    });
+
+    okButton.addEventListener('click', function() {
+      window.location.href = 'contact-instructions.html';
     });
   </script>
 </body>
